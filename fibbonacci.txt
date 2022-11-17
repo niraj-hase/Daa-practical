@@ -1,0 +1,48 @@
+using namespace std;
+#include<iostream>
+
+//Fibonacci Series Using Iteration
+int main()   
+{
+    int n1=0,n2=1,n3,i,num;
+    cout<<"Enter the number of element= ";
+    cin>>num;
+    cout<<"\nThe fibonacci series is: ";
+    cout<<n1<<" "<<n2<<" ";
+    for(i=2; i<num; i++)
+    {
+        n3=n1+n2;
+        cout<<n3<<" ";
+        n1=n2;
+        n2=n3;
+    }
+    }
+
+
+//Fibonacci Series Using Recursion
+
+using namespace std;
+    #include<iostream>
+    
+    int fib(int x)
+    {
+        if((x==1)||(x==0)){
+            return(x);
+        }
+        else{
+            return(fib(x-1)+fib(x-2));
+        }
+    }
+    int main()
+    {
+        int x, i=0;
+        cout<< "Enter the number of terms of series: ";
+        cin>> x;
+        cout<< "\nFibonacci series is: ";
+        while(i<x)
+        {
+            cout<<" "<<fib(i);
+            i++;
+        }
+        return 0;
+    }
